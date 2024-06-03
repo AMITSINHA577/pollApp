@@ -1,0 +1,7 @@
+spring.datasource.url=jdbc:postgresql://localhost:5432/pollDB
+spring.datasource.username=root
+spring.datasource.password=root
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.properties.hibernate.jdbc.batch_size=0
+logging.level.org.hibernate.SQL=DEBUG
+logging.level.org.hibernate.type=TRACE

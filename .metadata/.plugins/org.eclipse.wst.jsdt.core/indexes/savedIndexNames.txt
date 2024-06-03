@@ -1,0 +1,1 @@
+INDEX VERSION 1.4+D:\Java_Project_all\Poll_App\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes

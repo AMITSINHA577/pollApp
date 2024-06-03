@@ -1,0 +1,5 @@
+package com.pollapp.repository;
+
+public interface UserRepository {
+
+}

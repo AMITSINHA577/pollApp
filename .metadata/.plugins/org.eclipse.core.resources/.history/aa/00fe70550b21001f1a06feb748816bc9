@@ -1,0 +1,4 @@
+package com.pollapp.repository;
+
+public interface PollRepository extends JpaRepository<Poll, Long> {
+}

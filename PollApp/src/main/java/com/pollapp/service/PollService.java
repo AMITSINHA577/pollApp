@@ -1,0 +1,54 @@
+package com.pollapp.service;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.pollapp.entity.Poll;
+import com.pollapp.entity.Vote;
+import com.pollapp.repository.PollRepository;
+import com.pollapp.repository.VoteRepository;
+
+@Service
+public class PollService {
+	@Autowired
+	private PollRepository pollRepository;
+
+	@Autowired
+	private VoteRepository voteRepository;
+
+	public Poll createPoll(Poll poll) {
+		return pollRepository.save(poll);
+	}
+
+	public List<Poll> getAllPolls() {
+		return pollRepository.findAll();
+	}
+
+	public Poll getPollById(Long id) {
+		return pollRepository.findById(id).orElse(null);
+	}
+
+	public Map<String, Long> getPollResults(Long pollId) {
+		Poll poll = getPollById(pollId);
+		if (poll == null) {
+			return null; // or throw an exception
+		}
+
+		List<Vote> votes = voteRepository.findByPollId(pollId);
+		Map<String, Long> results = new HashMap<>();
+
+		for (String option : poll.getOptions()) {
+			results.put(option, 0L);
+		}
+
+		for (Vote vote : votes) {
+			results.put(vote.getSelectedOption(), results.get(vote.getSelectedOption()) + 1);
+		}
+
+		return results;
+	}
+}

@@ -1,0 +1,27 @@
+package com.pollapp.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.pollapp.entity.Poll;
+import com.pollapp.repository.PollRepository;
+
+@Service
+public class PollService {
+	@Autowired
+	private PollRepository pollRepository;
+
+	public Poll createPoll(Poll poll) {
+		return pollRepository.save(poll);
+	}
+
+	public List<Poll> getAllPolls() {
+		return pollRepository.findAll();
+	}
+
+	public Poll getPollById(Long id) {
+		return pollRepository.findById(id).orElse(null);
+	}
+}

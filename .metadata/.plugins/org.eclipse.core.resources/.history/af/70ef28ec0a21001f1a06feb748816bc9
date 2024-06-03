@@ -1,0 +1,18 @@
+package com.pollapp.entity;
+
+@Entity
+@Table(name = "votes")
+public class Vote {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @ManyToOne
+    @JoinColumn(name = "poll_id", nullable = false)
+    private Poll poll;
+
+    @Column(nullable = false)
+    private String username;
+
+    @Column(nullable = false)
+    private String selectedOption;

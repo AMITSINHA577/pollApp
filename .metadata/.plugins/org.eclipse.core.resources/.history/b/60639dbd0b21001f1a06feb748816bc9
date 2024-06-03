@@ -1,0 +1,5 @@
+package com.pollapp.controller;
+
+public class VoteController {
+
+}

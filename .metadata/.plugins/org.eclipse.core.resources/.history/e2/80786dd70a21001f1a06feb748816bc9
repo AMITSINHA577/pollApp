@@ -1,0 +1,5 @@
+package com.pollapp.entity;
+
+public class Vote {
+
+}
