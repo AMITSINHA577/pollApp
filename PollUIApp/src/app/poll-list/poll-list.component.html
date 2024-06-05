@@ -1,0 +1,13 @@
+<div class="polls-container">
+    <table>
+        <tr *ngFor="let item of polls">
+            <td>
+                <span class="table-question">{{item.question}}</span>
+                <span class="table-menu-btn">
+                    <button *ngIf="loggedInUser" (click)="openVote(item)">Vote</button>
+                    <button (click)="openResult(item)">Result</button>
+                </span>
+            </td>
+        </tr>
+    </table>
+</div>

@@ -1,0 +1,12 @@
+<div class="menu-bar">
+  <div class="left-menu">
+      <a *ngIf="loggedInUser" (click)="openCreatePoll()">Create New Poll</a>
+  </div>
+  <div class="right-menu">
+      <a *ngIf="!loggedInUser" (click)="openLoginModal()">Login</a>
+      <a *ngIf="!loggedInUser" (click)="openSignUoModal()">Sign Up</a>
+      <a *ngIf="loggedInUser">Welcome : {{loggedInUser}}</a>
+      <a *ngIf="loggedInUser" (click)="logOut()">Log Out</a>
+  </div>
+</div>
+<app-poll-list></app-poll-list>

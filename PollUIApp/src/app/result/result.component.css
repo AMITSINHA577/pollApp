@@ -1,0 +1,13 @@
+.result-container {
+    padding: 20px;
+}
+
+.result-question {
+    display: flex;
+    justify-content: center;
+}
+
+.result {
+    display: flex;
+    justify-content: space-between;
+}

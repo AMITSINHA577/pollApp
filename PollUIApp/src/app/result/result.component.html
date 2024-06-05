@@ -1,0 +1,9 @@
+<div class="result-container">
+    <h2 class="result-question">{{poll.question}}</h2>
+    <div class="result" *ngFor="let opt of result.options">
+        <h2>{{opt.option}}</h2>
+        <h2>{{getPersentage(opt.value, result.total)}}</h2>
+        <h2>{{opt.value}}/{{result.total}}</h2>
+    </div>
+    <button type="button" (click)="onNoClick()">Close</button>
+</div>

@@ -1,0 +1,32 @@
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 80%;
+    margin: auto;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.polls-container {
+    margin-top: 20px;
+}
+
+.table-menu-btn {
+    float: right;
+}
+
+.table-menu-btn button {
+    margin: 10px;
+}
+
+.table-question {
+    line-height: 55px;
+    margin-left: 20px;
+}

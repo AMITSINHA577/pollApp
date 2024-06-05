@@ -1,0 +1,31 @@
+.input-container {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+  
+.input-field {
+    flex: 1; /* This makes the input field take up the remaining space */
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px; /* Rounded corners on the left side */
+    outline: none;
+}
+  
+.add-button {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-left: none; /* Remove the left border to merge with input */
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+    border-radius: 0 4px 4px 0; /* Rounded corners on the right side */
+    margin-top: -5px;
+}
+  
+.add-button:hover {
+    background-color: #218838;
+}
+  
